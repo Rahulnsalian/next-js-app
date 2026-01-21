@@ -13,5 +13,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: docker build . -t rahulmood/next.js-app
-    - run :echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password-stdin
+    - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password-stdin
     - run: docker push rahulmood/next.js-app
